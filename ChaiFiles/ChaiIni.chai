@@ -1,0 +1,57 @@
+class States {
+	var I;
+	var T;
+	def States() {
+		this.I = 1; 
+		this.T = 2;
+	}
+};
+
+class MasterStates {
+	var PRESOLVING;
+	var SOLVING;
+	var CHECKING;
+	var SENDING1;
+	var SENDING2;
+	var RECEIVING;
+	var BEFORE_END;
+	def MasterStates() {
+		this.PRESOLVING = 3; 
+		this.SOLVING = 4;
+		this.CHECKING = 5;
+		this.SENDING1 = 6;
+		this.SENDING2 = 7;
+		this.RECEIVING = 8;
+		this.BEFORE_END = 9;
+	}
+};
+
+class SlaveStates {
+	var PRESOLVING;
+	var RECEIVING;
+	var SOLVING;
+	var SENDING;
+	def SlaveStates() {
+		this.PRESOLVING = 3;
+		this.RECEIVING = 4;
+		this.SOLVING = 5;
+		this.SENDING = 6;
+	}
+};
+
+class Commands {
+        var FINISH;
+	def Commands() {
+		this.FINISH = 1;
+	}
+};
+
+var mStates = States();
+var mMasterStates = MasterStates();
+var mSlaveStates = SlaveStates();
+var mCommands = Commands();
+
+var mSteps = balance_params[0];
+
+var bnb_assert_flag = 1;
+
